@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube - Video</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+  <div class="navbar">
+    <div class="logo"><a href="index.html">YouTube</a></div>
+    <input type="text" placeholder="Search...">
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider"></span>
+    </label>
+    <div class="profile">K</div>
+  </div>
+
+  <div class="video-page-container">
+    <main class="main-video-content">
+      <div class="video-container">
+        <video width="100%" controls autoplay>
+          <source src="images/demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <div class="video-details">
+          <h2 class="video-main-title">Demo Video Title</h2>
+          <div class="video-actions">
+            <p>123 views • Uploaded Today</p>
+            <div class="buttons">
+              <button onclick="likeVideo()">👍 Like <span id="like-count">0</span></button>
+              <button onclick="dislikeVideo()">👎 Dislike <span id="dislike-count">0</span></button>
+              <button>🔗 Share</button>
+              <button>💾 Download</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="channel-info">
+          <div class="channel-name">
+            <h3 id="channel-name-placeholder">Channel Name</h3>
+            <span>24.1K subscribers</span>
+          </div>
+          <button class="subscribe-btn">Subscribe</button>
+        </div>
+
+        <div class="comments-section">
+          <h3>1,331 Comments</h3>
+          <div class="add-comment">
+            <input type="text" id="comment-box" placeholder="Add a comment..."/>
+            <button onclick="postComment()">Post</button>
+          </div>
+          <ul id="comments">
+            </ul>
+        </div>
+      </div>
+    </main>
+
+    <aside class="recommendations-sidebar" id="recommendations-sidebar">
+      </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
